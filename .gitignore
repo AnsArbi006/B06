@@ -49,6 +49,7 @@ _sidebar.md
 hs_err_pid*
 replay_pid*
 *.hprof
+.jqwik-database
 **/build/
 **/bin/
 **/out/
