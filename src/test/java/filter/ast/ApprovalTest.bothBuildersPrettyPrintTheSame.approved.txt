@@ -1,0 +1,2 @@
+pattern: (((artist == "Beatles") or (artist == "Queen")) and (year >= 1965))
+visitor: (((artist == "Beatles") or (artist == "Queen")) and (year >= 1965))

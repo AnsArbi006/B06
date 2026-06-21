@@ -10,7 +10,46 @@ import net.jqwik.api.*;
 
 public class RoundtripPropertiesTest {
 
-  // TODO
+  @Property
+  boolean patternBuilderSurvivesRoundtrip(@ForAll("simpleQueries") String query) {
+    // Erstes Parsen und Bauen mit dem Pattern-Builder.
+    var expr = AstBuilders.fromQuery(query, new AstBuilderPattern()::translate);
+    // Danach wieder in Text drucken und noch einmal parsen.
+    var roundtrip = AstBuilders.fromQuery(AstPrinter.toString(expr), new AstBuilderPattern()::translate);
+    // Der AST soll nach dem Hin-und-zurück gleich bleiben.
+    return expr.equals(roundtrip);
+  }
+
+  @Property
+  boolean visitorBuilderSurvivesRoundtrip(@ForAll("simpleQueries") String query) {
+    // Erstes Parsen und Bauen mit dem Visitor-Builder.
+    var expr = AstBuilders.fromQuery(query, new AstBuilderVisitor()::translate);
+    // Danach wieder in Text drucken und noch einmal parsen.
+    var roundtrip = AstBuilders.fromQuery(AstPrinter.toString(expr), new AstBuilderVisitor()::translate);
+    // Der AST soll nach dem Hin-und-zurück gleich bleiben.
+    return expr.equals(roundtrip);
+  }
+
+  @Property
+  boolean bothBuildersAgree(@ForAll("simpleQueries") String query) {
+    // AST aus dem Pattern-Builder erzeugen.
+    var patternExpr = AstBuilders.fromQuery(query, new AstBuilderPattern()::translate);
+    // AST aus dem Visitor-Builder erzeugen.
+    var visitorExpr = AstBuilders.fromQuery(query, new AstBuilderVisitor()::translate);
+    // Beide Bäume sollen denselben Inhalt haben.
+    return patternExpr.equals(visitorExpr);
+  }
+
+  @Property
+  boolean simplifyRemovesDoubleNegation(@ForAll("comparisons") String comparison) {
+    // Baue bewusst not not vor einen Vergleich.
+    var expr =
+        AstBuilders.fromQuery("not not " + comparison, new AstBuilderPattern()::translate);
+    // Das ist die Version ohne doppelte Negation.
+    var expected = AstBuilders.fromQuery(comparison, new AstBuilderPattern()::translate);
+    // simplify soll beide Varianten gleich machen.
+    return AstBuilders.simplify(expr).equals(expected);
+  }
 
   // ---------- @Provide-Methods for Arbitraries ----------
 

@@ -14,8 +14,20 @@ public class AstBuilders {
   }
 
   public static Expr simplify(Expr e) {
-    // TODO
-    return e;
+    return switch (e) {
+      // not not x wird zu x vereinfacht.
+      case Expr.Not(Expr.Not(var inner)) -> simplify(inner);
+      // Ein einzelnes not bleibt erhalten, aber das Innere wird weiter vereinfacht.
+      case Expr.Not(var inner) -> new Expr.Not(simplify(inner));
+      // Bei And werden beide Seiten rekursiv vereinfacht.
+      case Expr.And(var left, var right) -> new Expr.And(simplify(left), simplify(right));
+      // Bei Or werden beide Seiten rekursiv vereinfacht.
+      case Expr.Or(var left, var right) -> new Expr.Or(simplify(left), simplify(right));
+      // Vergleiche sind schon atomar und bleiben daher gleich.
+      case Expr.Comparison(var field, var op, var value) -> new Expr.Comparison(field, op, value);
+      // Auch in-Listen bleiben als Blätter unverändert.
+      case Expr.InList(var field, var values) -> new Expr.InList(field, values);
+    };
   }
 
   public static FilterParser.QueryContext parse(String query) {
