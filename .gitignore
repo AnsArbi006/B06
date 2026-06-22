@@ -57,6 +57,11 @@ replay_pid*
 .gradle/
 # don't ignore any gradle wrapper files
 !gradle/
+!Filter-DSL/gradle/
+!Filter-DSL/gradle/wrapper/
+!Filter-DSL/gradle/wrapper/gradle-wrapper.jar
+!Filter-DSL/src/main/resources/
+!Filter-DSL/src/main/resources/songlist.txt
 
 
 # Packages #

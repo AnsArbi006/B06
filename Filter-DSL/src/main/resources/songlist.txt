@@ -1,0 +1,56 @@
+# title;artist;genre;year
+Hey Jude;Beatles;rock;1968
+Come Together;Beatles;rock;1969
+Smells Like Teen Spirit;Nirvana;grunge;1991
+Come as You Are;Nirvana;grunge;1991
+Lithium;Nirvana;grunge;1991
+In Bloom;Nirvana;grunge;1991
+The Bard's Song (In the Forest);Blind Guardian;power metal;1992
+Mirror Mirror;Blind Guardian;power metal;1998
+Valhalla;Blind Guardian;power metal;1989
+Wasted Years;Blind Guardian;power metal;1992
+Hier kommt Alex;Die Toten Hosen;punk rock;1988
+Tage wie diese;Die Toten Hosen;rock;2012
+Bonnie & Clyde;Die Toten Hosen;punk rock;1996
+Alles aus Liebe;Die Toten Hosen;rock;1993
+Sultans of Swing;Dire Straits;rock;1978
+Money for Nothing;Dire Straits;rock;1985
+Brothers in Arms;Dire Straits;rock;1985
+Walk of Life;Dire Straits;rock;1985
+Am Fenster;City;rock;1977
+Der blaue Planet;Karat;rock;1982
+Ameno;In Extremo;folk metal;2000
+Vollmond;In Extremo;folk rock;2001
+Engel;Rammstein;industrial metal;1997
+Why Worry;Mark Knopfler;rock;1982
+What It Is;Mark Knopfler;rock;2000
+Boom, Like That;Mark Knopfler;rock;2004
+Bermuda Triangle;Mark Knopfler;rock;1996
+Mont Klamott;Silly;rock;1983
+Bataillon d'Amour;Silly;rock;1986
+Kleiner Vogel;Silly;rock;1986
+Queen of Spades;Silly;rock;1996
+Bohemian Rhapsody;Queen;rock;1975
+Don't Stop Me Now;Queen;rock;1978
+We Will Rock You;Queen;rock;1977
+Somebody to Love;Queen;rock;1976
+Alt wie ein Baum;Puhdys;rock;1976
+Wenn ein Mensch lebt;Puhdys;rock;1973
+Geh zu ihr;Puhdys;rock;1979
+Das Buch;Puhdys;rock;1986
+Kleid aus Rosen;Subway to Sally;folk metal;2003
+Veitstanz;Subway to Sally;folk metal;1998
+Sieben;Subway to Sally;folk metal;2007
+Minne duett;Subway to Sally;folk rock;2001
+Chariots of Fire;Vangelis;electronic;1981
+Conquest of Paradise;Vangelis;electronic;1992
+Blade Runner (End Titles);Vangelis;electronic;1982
+Titles;Vangelis;electronic;1981
+Fairytale of New York;The Pogues;folk rock;1987
+Dirty Old Town;The Pogues;folk rock;1985
+A Pair of Brown Eyes;The Pogues;folk rock;1985
+If I Should Fall from Grace with God;The Pogues;folk rock;1988
+Rainy Night in Soho;The Pogues;folk rock;1988
+The Irish Rover;The Pogues;folk rock;1987
+Sally MacLennane;The Pogues;folk rock;1985
+
